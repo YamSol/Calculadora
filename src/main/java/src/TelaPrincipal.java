@@ -442,16 +442,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
 	    valor2 = Double.parseDouble(txtEntrada.getText());
 	    switch(operador){
 		case "+":
-		    txtEntrada.setText(String.valueOf(valor1 + valor2));
+		    txtEntrada.setText(String.valueOf(calc.somar(valor1, valor2)));
 		    break;
 		case "-":
-		    txtEntrada.setText(String.valueOf(valor1 - valor2));
+		    txtEntrada.setText(String.valueOf(calc.subtrair(valor1, valor2)));
 		    break;
 		case "*":
-		    txtEntrada.setText(String.valueOf(valor1 * valor2));
+		    txtEntrada.setText(String.valueOf(calc.multiplicar(valor1, valor2)));
 		    break;
 		case "/":
-		    txtEntrada.setText(String.valueOf(valor1 / valor2));
+		    txtEntrada.setText(String.valueOf(calc.dividir(valor1, valor2)));
 		    break;
 		default:
 		    System.out.println("Valor digitado inválido");

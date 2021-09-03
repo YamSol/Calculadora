@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="5" name="src.CalculadoraTest" time="0.038" errors="0" skipped="0">
+<testsuite tests="5" failures="5" name="src.CalculadoraTest" time="0.036" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\bin"/>
@@ -15,7 +15,6 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="src.CalculadoraTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\yamso\Documents\Programação\NetBeansProjects\Calculadora"/>
     <property name="java.runtime.version" value="1.8.0_281-b09"/>
@@ -48,7 +47,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_281\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=src.CalculadoraTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.3\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.3\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="pt"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,13 +64,40 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testSubtrair" time="0.011">
+  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testRaizQuadrada" time="0.01">
+    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
+	at src.CalculadoraTest.testRaizQuadrada(CalculadoraTest.java:116)
+</failure>
+    <system-out>raizQuadrada
+</system-out>
+  </testcase>
+  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testSubtrair" time="0">
     <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
 	at src.CalculadoraTest.testSubtrair(CalculadoraTest.java:69)
 </failure>
     <system-out>subtrair
+</system-out>
+  </testcase>
+  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testMultiplicar" time="0">
+    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
+	at src.CalculadoraTest.testMultiplicar(CalculadoraTest.java:85)
+</failure>
+    <system-out>multiplicar
+</system-out>
+  </testcase>
+  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testSomar" time="0">
+    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
+	at src.CalculadoraTest.testSomar(CalculadoraTest.java:53)
+</failure>
+    <system-out>somar
 </system-out>
   </testcase>
   <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testDividir" time="0.026">
@@ -84,33 +110,6 @@
 	at src.CalculadoraTest.testDividir(CalculadoraTest.java:99)
 </failure>
     <system-out>dividir
-</system-out>
-  </testcase>
-  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testSomar" time="0">
-    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
-	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
-	at src.CalculadoraTest.testSomar(CalculadoraTest.java:53)
-</failure>
-    <system-out>somar
-</system-out>
-  </testcase>
-  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testMultiplicar" time="0.001">
-    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
-	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
-	at src.CalculadoraTest.testMultiplicar(CalculadoraTest.java:85)
-</failure>
-    <system-out>multiplicar
-</system-out>
-  </testcase>
-  <testcase classname="src.CalculadoraTest" name="src.CalculadoraTest.testRaizQuadrada" time="0">
-    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
-	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
-	at src.CalculadoraTest.testRaizQuadrada(CalculadoraTest.java:116)
-</failure>
-    <system-out>raizQuadrada
 </system-out>
   </testcase>
 </testsuite>
