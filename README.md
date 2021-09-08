@@ -3,4 +3,4 @@ Projeto criado pelo grupo para realização de atividade escolar:
 - Construção de calculadora com interface gráfica em java (usando matisse);
 - Uso do Git + Github;
 - Organização;
-- trabalho em equipe
+- Trabalho em equipe
