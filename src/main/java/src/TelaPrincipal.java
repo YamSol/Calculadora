@@ -24,6 +24,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     double valor1, valor2;
     String operador;
+    boolean mensagemErro = false;
     
     Calculadora calc = new Calculadora();
     
@@ -64,6 +65,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
+        txtEntrada.setEditable(false);
         txtEntrada.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEntrada.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtEntrada.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -369,44 +371,64 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"0");
+        if(txtEntrada.getText().length() < 12){
+	txtEntrada.setText(txtEntrada.getText()+"0");
+	}
 		
     }//GEN-LAST:event_btn0ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"1");
+        if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"1");
+	}
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-       txtEntrada.setText(txtEntrada.getText()+"2");
+       if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"2");
+       }
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-       txtEntrada.setText(txtEntrada.getText()+"3");
+       if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"3");
+       }
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"6");
+        if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"6");
+	}
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"5");
+        if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"5");
+	}
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"4");
+        if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"4");
+	}
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"7");
+        if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"7");
+	}
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"8");
+        if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"8");
+	}
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+"9");
+        if(txtEntrada.getText().length() < 12){
+	    txtEntrada.setText(txtEntrada.getText()+"9");
+	}
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
@@ -451,7 +473,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
 		    txtEntrada.setText(String.valueOf(calc.multiplicar(valor1, valor2)));
 		    break;
 		case "/":
-		    txtEntrada.setText(String.valueOf(calc.dividir(valor1, valor2)));
+		    if(valor2 == 0){
+			txtEntrada.setText("Erro 1: não divisível por 0");
+			mensagemErro = true;
+		    }else{
+			txtEntrada.setText(String.valueOf(calc.dividir(valor1, valor2)));
+		    }
 		    break;
 		default:
 		    System.out.println("Valor digitado inválido");
@@ -484,9 +511,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
         //limpa o txt e as variaveis
+	txtEntrada.setText("");
 	valor1 = 0;
 	valor2 = 0;
-	txtEntrada.setText("");
     }//GEN-LAST:event_btnCActionPerformed
 
     private void esc(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_esc
