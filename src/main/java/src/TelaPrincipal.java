@@ -437,7 +437,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCEActionPerformed
 
     private void btndotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndotActionPerformed
-        txtEntrada.setText(txtEntrada.getText()+".");
+        if(txtEntrada.getText().length() < 12){
+	    if (!txtEntrada.getText().contains(".")) {
+		txtEntrada.setText(txtEntrada.getText()+".");
+	    }
+	}
 	
 	
 	/*String entrada = txtEntrada.getText();
